@@ -1,0 +1,34 @@
+function townInfo(arg1, arg2, arg3) {
+    let townName = String(arg1);
+    let population = Number(arg2);
+    let area = Number(arg3);
+  
+    let isValidTown = true;
+    let isValidPopulation = true;
+    let isValidArea = true;
+  
+    let townTitleCounter = 0;
+    for (let index = 0; index < townName.length; index++) {
+      townTitleCounter++;
+    }
+  
+    if (townTitleCounter < 3) {
+      console.log("Town name must be at least 3 characters!");
+  
+      isValidTown = false;
+    }
+  
+    if (population < 0) {
+      console.log(`Population must be a positive number!`);
+      isValidPopulation = false;
+    }
+    if (area < 0) {
+      console.log(`Area must be a positive number!`);
+      isValidArea = false;
+    }
+    if (isValidTown && isValidPopulation && isValidArea) {
+      console.log(
+        `Town ${townName} has population of ${population} and area ${area} square km.`
+      );
+    }
+  }
