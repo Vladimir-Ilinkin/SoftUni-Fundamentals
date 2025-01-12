@@ -1,0 +1,7 @@
+function convertDistance(param1) {
+    let meter = Number(param1);
+    let kMeters = meter / 1000;
+    let miles = kMeters * 0.621371;
+    console.log(`${meter} meters is equal to ${kMeters} kilometers.`);
+    console.log(`${kMeters} kilometers is equal to ${miles.toFixed(2)} miles.`);
+  }
